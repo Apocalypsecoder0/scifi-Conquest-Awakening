@@ -1,0 +1,24 @@
+/game
+    /assets
+        /images
+    /classes
+        /Player.php
+        /Planet.php
+        /Fleet.php
+        /Combat.php
+        /Forum.php
+    /includes
+        /header.php
+        /footer.php
+    /pages
+        /home.php
+        /login.php
+        /register.php
+        /actions.php
+        /forum.php
+    /database
+        ogame.sql
+    index.php
+    config.php
+    AdminControl.php
+    install.php
