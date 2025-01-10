@@ -1,4 +1,4 @@
-# scifi-conquest-game
+# scifi-Conquest Awakening
 Apocalyptic Online Server
 # scifi conquest MMORPG
 GalaxyCore Engine:
