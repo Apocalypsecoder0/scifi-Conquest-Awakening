@@ -1,7 +1,25 @@
 CREATE DATABASE testgame;
 
 USE ogame;
+-- Forum topics table
+CREATE TABLE forum_topics (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    player_id INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (player_id) REFERENCES players(id)
+);
 
+-- Forum posts table
+CREATE TABLE forum_posts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    topic_id INT NOT NULL,
+    player_id INT NOT NULL,
+    content TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (topic_id) REFERENCES forum_topics(id),
+    FOREIGN KEY (player_id) REFERENCES players(id)
+);
 -- Players table
 CREATE TABLE players (
     id INT AUTO_INCREMENT PRIMARY KEY,
