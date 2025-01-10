@@ -23,7 +23,7 @@ $stmt->execute([$player_id]);
 $planets = $stmt->fetchAll();
 ?>
 
-<main>
+<main><h2>Welcome to scifi-conquest-game Online</h2>
     <h2>Welcome, <?php echo htmlspecialchars($username); ?>!</h2>
     <p>Here is an overview of your resources and planets.</p>
 
