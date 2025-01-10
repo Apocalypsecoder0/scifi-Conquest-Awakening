@@ -19,3 +19,17 @@
 | - ships[]          |        | - level         |
 | - missionType      |        | - resourceCost  |
 +--------------------+        +-----------------+
+1. Use Case Diagram
+
+Actors:
+	•	Player: Registers, manages planets, attacks, defends, and trades resources.
+	•	Admin: Moderates game, manages player accounts, and resolves disputes.
+
+Use Cases:
+	•	Register/Login
+	•	Manage Planets (Build/Upgrade/Destroy Structures)
+	•	Send Fleets (Attack/Trade/Colonize)
+	•	Research Technologies
+	•	Join/Create Alliances
+	•	Trade Resources
+	•	Administer Game (Admin Only)
