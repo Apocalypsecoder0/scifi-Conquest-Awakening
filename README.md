@@ -1,6 +1,6 @@
 # scifi-conquest-game
 # scifi conquest MMORPG
-
+GalaxyCore Engine:
 test game MMORPG is a text-based turn-based strategy game where players can explore the universe, manage resources, build fleets, and engage in interstellar combat. This project is a simplified implementation inspired by the classic Ogame MMORPG.
 
 ## Features
@@ -23,7 +23,7 @@ test game MMORPG is a text-based turn-based strategy game where players can expl
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/game-mmorpg.git
+    git clone https://github.com/Apocalypsecoder0/game-mmorpg.git
     cd tgame-mmorpg
     ```
 
@@ -40,7 +40,7 @@ test game MMORPG is a text-based turn-based strategy game where players can expl
       ```php
       <?php
       define('DB_HOST', 'localhost');
-      define('DB_NAME', 'ogame');
+      define('DB_NAME', 'game');
       define('DB_USER', 'yourusername');
       define('DB_PASS', 'yourpassword');
       ?>
@@ -50,7 +50,7 @@ test game MMORPG is a text-based turn-based strategy game where players can expl
     - Ensure your web server is configured to serve the project directory.
 
 4. **Access the game:**
-    - Open your web browser and navigate to `http://localhost/ogame-mmorpg/`.
+    - Open your web browser and navigate to `http://localhost/game-mmorpg/`.
 
 ### Project Structure
 ### Classes
