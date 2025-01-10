@@ -2,7 +2,7 @@
 Apocalyptic Online Server
 # scifi conquest MMORPG
 GalaxyCore Engine:
-test game MMORPG is a text-based turn-based strategy game where players can explore the universe, manage resources, build fleets, and engage in interstellar combat. This project is a simplified implementation inspired by the classic Ogame MMORPG.
+test game MMORPG is a text-based turn-based real time strategy game where players can explore the universe, manage resources, build fleets, and engage in interstellar combat. This project is a simplified implementation inspired by the classic Ogame MMORPG.
 
 ## Features
 
