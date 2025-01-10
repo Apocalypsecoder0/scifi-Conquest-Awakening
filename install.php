@@ -26,6 +26,8 @@ try {
         CREATE TABLE IF NOT EXISTS planets (
             id INT AUTO_INCREMENT PRIMARY KEY,
             name VARCHAR(50) NOT NULL,
+            description TEXT,
+            temperature INT,
             player_id INT,
             metal INT DEFAULT 1000,
             crystal INT DEFAULT 1000,
@@ -53,6 +55,30 @@ try {
             result VARCHAR(50),
             FOREIGN KEY (attacker_id) REFERENCES players(id),
             FOREIGN KEY (defender_id) REFERENCES players(id)
+        )
+    ");
+
+    // Create new tables for ships and weapons
+    $pdo->exec("
+        CREATE TABLE IF NOT EXISTS ships (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(50) NOT NULL,
+            type VARCHAR(50) NOT NULL,
+            player_id INT,
+            fleet_id INT,
+            FOREIGN KEY (player_id) REFERENCES players(id),
+            FOREIGN KEY (fleet_id) REFERENCES fleets(id)
+        )
+    ");
+
+    $pdo->exec("
+        CREATE TABLE IF NOT EXISTS weapons (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(50) NOT NULL,
+            damage INT NOT NULL,
+            range INT NOT NULL,
+            ship_id INT,
+            FOREIGN KEY (ship_id) REFERENCES ships(id)
         )
     ");
 
