@@ -53,3 +53,33 @@ test game MMORPG is a text-based turn-based strategy game where players can expl
     - Open your web browser and navigate to `http://localhost/ogame-mmorpg/`.
 
 ### Project Structure
+### Classes
+
+- **Player:** Handles player data and actions.
+- **Planet:** Manages planetary resources.
+- **Fleet:** Manages fleet data and actions.
+- **Combat:** Handles turn-based combat mechanics.
+
+### Pages
+
+- **Home:** Welcome page with game overview.
+- **Login:** Player login page.
+- **Register:** Player registration page.
+- **Actions:** Handles player actions like attacking other players.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- Inspired by the classic Ogame MMORPG.
+- Special thanks to the open-source community for their invaluable resources and support.
+
+## Contact
+
+For questions or suggestions, please open an issue on GitHub or contact the project maintainer at your.email@example.com.
