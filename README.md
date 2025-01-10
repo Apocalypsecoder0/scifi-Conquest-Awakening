@@ -13,7 +13,9 @@ test game MMORPG is a text-based turn-based real time strategy game where player
 - **Universe Exploration:** Explore galaxies and planets.
 - unit management attack troop and defince troop 
 ## Getting Started
-<html>TABLE_OF_COTENTS</html>html
+
+<html>TABLE_OF_COTENTS</html>
+
 ### Prerequisites
 
 - PHP 7.4 or higher
