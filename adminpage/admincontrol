@@ -16,9 +16,13 @@ if (!isAdmin()) {
 include 'classes/Player.php';
 include 'classes/Planet.php';
 include 'classes/Fleet.php';
+include 'classes/Galaxy.php';
+include 'classes/Universe.php';
+include 'classes/Unit.php';
 
 $pdo = new PDO('mysql:host=localhost;dbname=ogame', 'root', '');
 
+// Functions to fetch data
 function getPlayers($pdo) {
     $stmt = $pdo->query("SELECT * FROM players");
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -31,6 +35,16 @@ function getPlanets($pdo) {
 
 function getFleets($pdo) {
     $stmt = $pdo->query("SELECT * FROM fleets");
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function getGalaxies($pdo) {
+    $stmt = $pdo->query("SELECT * FROM galaxies");
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function getUnits($pdo) {
+    $stmt = $pdo->query("SELECT * FROM units");
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
@@ -54,6 +68,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmt = $pdo->prepare("DELETE FROM fleets WHERE id = ?");
             $stmt->execute([$fleet_id]);
             break;
+        case 'delete_galaxy':
+            $galaxy_id = $_POST['galaxy_id'];
+            $stmt = $pdo->prepare("DELETE FROM galaxies WHERE id = ?");
+            $stmt->execute([$galaxy_id]);
+            break;
+        case 'delete_unit':
+            $unit_id = $_POST['unit_id'];
+            $stmt = $pdo->prepare("DELETE FROM units WHERE id = ?");
+            $stmt->execute([$unit_id]);
+            break;
         // Add more admin actions as needed
     }
 }
@@ -62,6 +86,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 $players = getPlayers($pdo);
 $planets = getPlanets($pdo);
 $fleets = getFleets($pdo);
+$galaxies = getGalaxies($pdo);
+$units = getUnits($pdo);
 ?>
 
 <!DOCTYPE html>
@@ -188,7 +214,71 @@ $fleets = getFleets($pdo);
                 </tbody>
             </table>
         </section>
+
+        <section>
+            <h2>Manage Galaxies</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($galaxies as $galaxy): ?>
+                    <tr>
+                        <td><?php echo $galaxy['id']; ?></td>
+                        <td><?php echo $galaxy['name']; ?></td>
+                        <td>
+                            <form action="AdminControl.php" method="post">
+                                <input type="hidden" name="action" value="delete_galaxy">
+                                <input type="hidden" name="galaxy_id" value="<?php echo $galaxy['id']; ?>">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Manage Units</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($units as $unit): ?>
+                    <tr>
+                        <td><?php echo $unit['id']; ?></td>
+                        <td><?php echo $unit['name']; ?></td>
+                        <td><?php echo $unit['type']; ?></td>
+                        <td>
+                            <form action="AdminControl.php" method="post">
+                                <input type="hidden" name="action" value="delete_unit">
+                                <input type="hidden" name="unit_id" value="<?php echo $unit['id']; ?>">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2025 Ogame MMORPG</p>
+    </footer>
+</body>
+</html>
 
     <footer>
         <p>&copy; 2025 Ogame MMORPG</p>
