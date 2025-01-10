@@ -51,7 +51,41 @@ CREATE TABLE fleets (
     FOREIGN KEY (player_id) REFERENCES players(id),
     FOREIGN KEY (planet_id) REFERENCES planets(id)
 );
+-- Ships table
+CREATE TABLE ships (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    type VARCHAR(50) NOT NULL,
+    player_id INT,
+    fleet_id INT,
+    FOREIGN KEY (player_id) REFERENCES players(id),
+    FOREIGN KEY (fleet_id) REFERENCES fleets(id)
+);
 
+-- Weapons table
+CREATE TABLE weapons (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    damage INT NOT NULL,
+    range INT NOT NULL,
+    ship_id INT,
+    FOREIGN KEY (ship_id) REFERENCES ships(id)
+);
+
+-- Expanded Planets table
+CREATE TABLE planets (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    description TEXT,
+    temperature INT,
+    player_id INT,
+    galaxy_id INT,
+    metal INT DEFAULT 1000,
+    crystal INT DEFAULT 1000,
+    deuterium INT DEFAULT 1000,
+    FOREIGN KEY (player_id) REFERENCES players(id),
+    FOREIGN KEY (galaxy_id) REFERENCES galaxies(id)
+);
 -- Combat table
 CREATE TABLE combats (
     id INT AUTO_INCREMENT PRIMARY KEY,
