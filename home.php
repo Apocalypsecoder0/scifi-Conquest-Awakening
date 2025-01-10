@@ -30,6 +30,8 @@ $planets = $stmt->fetchAll();
     <section>
         <h3>Resources</h3>
         <ul>
+               <li>Turns: <?php echo $player['Turns']; ?></li>
+               <li>Cridits: <?php echo $player['Cridits']; ?></li>
             <li>Metal: <?php echo $player['metal']; ?></li>
             <li>Crystal: <?php echo $player['crystal']; ?></li>
             <li>Deuterium: <?php echo $player['deuterium']; ?></li>
