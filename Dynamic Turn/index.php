@@ -38,10 +38,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <section class="resources">
             <h2>Your Resources</h2>
             <div class="resource-details">
-                <p><strong>Metal:</strong> <?php echo $resources['metal']; ?></p>
-                <p><strong>Crystal:</strong> <?php echo $resources['crystal']; ?></p>
-                <p><strong>Energy:</strong> <?php echo $resources['energy']; ?></p>
-                <p><strong>Turns Left:</strong> <?php echo $turns_left; ?></p>
+                <section class="resources">
+    <h2>Your Resources</h2>
+    <div class="resource-details">
+        <p><strong>Metal:</strong> <?php echo $resources['metal']; ?></p>
+        <p><strong>Crystal:</strong> <?php echo $resources['crystal']; ?></p>
+        <p><strong>Energy:</strong> <?php echo $resources['energy']; ?></p>
+        <p><strong>Turns Left:</strong> <?php echo $new_turns; ?></p>
+    </div>
+</section>
             </div>
         </section>
 
