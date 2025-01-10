@@ -2,7 +2,7 @@
 <!DOCTYPE PHP>
 <PHP lang="en">
 <head>
-  <!-- Design by foolishdeveloper.com -->
+  <!-- Design by Apocalypsecoder0.com -->
     <title>Glassmorphism login Form Tutorial in html css</title>
  
     <link rel="preconnect" href="https://fonts.gstatic.com">
