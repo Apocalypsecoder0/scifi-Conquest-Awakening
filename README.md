@@ -11,7 +11,7 @@ test game MMORPG is a text-based turn-based strategy game where players can expl
 - **Fleet Management:** Build and manage fleets for combat.
 - **Turn-Based Combat:** Engage in turn-based fleet combat with other players.
 - **Universe Exploration:** Explore galaxies and planets.
-
+- unit management attack troop and defince troop 
 ## Getting Started
 
 ### Prerequisites
