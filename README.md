@@ -5,13 +5,28 @@ GalaxyCore Engine:
 test game MMORPG is a text-based turn-based real time strategy game where players can explore the universe, manage resources, build fleets, and engage in interstellar combat. This project is a simplified implementation inspired by the classic Ogame MMORPG.
 
 ## Features
+Player Management: Register and log in as a player.
+Resource Management: Manage resources such as metal, crystal, and deuterium.
+Building Management: Build and manage researchers and technology tree
+Fleet Management: Build and manage fleets for combat.
+Turn-Based Combat: Engage in turn-based fleet combat with other players.
+Universe Exploration: Explore galaxies and planets.
+Control planets and moons and use the jump gate for space travel and stargate for planetary travel 
+- Unit management attack troop, Super Attack Troops, and defince troop, Super Defince Troops, Spies/Covert Agents, Anti-Intelligence Agents, Counter-Intelligence (or Anti-Spy) Level , Intelligence (or Spy) Level/ Intelligence (or Spy) Level/ Siege/Offense, Anti-Covert/ anti-covert/anti-intelligence
 
-- **Player Management:** Register and log in as a player.
-- **Resource Management:** Manage resources such as metal, crystal, and deuterium.
-- **Fleet Management:** Build and manage fleets for combat.
-- **Turn-Based Combat:** Engage in turn-based fleet combat with other players.
-- **Universe Exploration:** Explore galaxies and planets.
-- unit management attack troop and defince troop 
+Unique
+
+Each race has a unique ability. Increasing your technology in this area either increases the likelyhood of successfully using that ability, increases the effect of that ability, or both.
+
+Mercenary 
+
+Increases your entire attack strength by the stated total percentages.
+
+Fortifications/Defense
+
+Increases your entire defense strength by the stated total percentages.
+
+Covert 
 ## Getting Started
 
 <html>TABLE_OF_COTENTS</html>
