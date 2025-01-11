@@ -1,9 +1,9 @@
 <?php
-// setup_info.php for OGame-inspired project
+// setup_info.php for rts turnbase mmorpg-inspired project
 
 // Database configuration
 $host = 'localhost';  // Database host (usually localhost)
-$dbname = 'ogame_database';  // Database name
+$dbname = 'game_database';  // Database name
 $username = 'root';  // Database username
 $password = '';  // Database password (leave empty if no password is set)
 
